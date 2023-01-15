@@ -1,0 +1,38 @@
+---
+- name: Ansible Copy Example Local to Remote
+  hosts: phpbb
+  tasks:
+    - name: copying style directory
+      become: true 
+      copy:
+        src: ~/Ansible/files/Milk_v2
+        dest: /bitnami/phpbb/styles/
+        owner: bitnami
+        group: daemon
+        mode: 0644
+
+- name: Ansible Copy Example Local to Remote
+  hosts: phpbb
+  tasks:
+    - name: copying images directory
+      become: true 
+      copy:
+        src: ~/Ansible/files/images/logo.png
+        dest: /bitnami/phpbb/styles/Milk_v2/theme/images/logo.png
+        owner: bitnami
+        group: daemon
+        mode: 0644
+
+- name: Ansible Copy Example Local to Remote
+  hosts: phpbb
+  tasks:
+    - name: copying extensions directory
+      become: true 
+      copy:
+        src: ~/Ansible/files/extensions/planetstyles/flightdeck
+        dest: /bitnami/phpbb/ext/phpbb/
+        owner: bitnami
+        group: daemon
+        mode: 0644
+
+
