@@ -29,8 +29,8 @@
     - name: copying extensions directory
       become: true 
       copy:
-        src: ~/Ansible/files/extensions/planetstyles/flightdeck
-        dest: /bitnami/phpbb/ext/phpbb/
+        src: ~/Ansible/files/extensions/planetstyles
+        dest: /bitnami/phpbb/ext/
         owner: bitnami
         group: daemon
         mode: 0644
